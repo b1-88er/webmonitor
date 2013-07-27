@@ -1,6 +1,8 @@
 import functools
 from fabric.api import *  # pylint: disable=W0401,W0614
 from fabric.contrib.files import exists
+from StringIO import StringIO
+import os
 
 
 def upload(local_path, remote_path, owner=None, mode='644'):
@@ -43,7 +45,7 @@ def webmonitor():
     user = functools.partial(sudo, user='webmonitor')
 
     if not exists('/opt/webmonitor'):
-        sudo('useradd -d /opt/webmonitor om -s /bin/bash webmonitor')
+        sudo('useradd -d /opt/webmonitor -m -s /bin/bash webmonitor')
 
     sudo('touch /var/log/webmonitor.log')
     sudo('chown webmonitor:webmonitor /var/log/webmonitor.log')
@@ -66,7 +68,7 @@ def webmonitor():
     upload(['[program:webmonitor]',
             'user = webmonitor',
             'directory = /opt/webmonitor/webmonitor',
-            'environment = PYTHONPATH=/opt/webmonitor/webmonitor/:$PYTHONPATH'
+            'environment = PYTHONPATH=/opt/webmonitor/webmonitor/:$PYTHONPATH',
             'command = bash -c "source /opt/webmonitor/bin/activate &&python /opt/webmonitor/webmonitor/monitor.py'],
            '/etc/supervisor/conf.d/webmonitor.conf',
            owner='root')
