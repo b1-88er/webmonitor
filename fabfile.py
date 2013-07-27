@@ -54,6 +54,9 @@ def webmonitor():
     if not exists('/opt/webmonitor/webmonitor'):
         with cd('/opt/webmonitor'):
             user('git clone https://github.com/eddwardo/webmonitor.git')
+    else:
+        with cd('/opt/webmonitor/webmonitor'):
+            user('git pull origin master')
 
     sudo('aptitude install -yq python-virtualenv')
 
