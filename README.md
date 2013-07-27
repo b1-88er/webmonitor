@@ -11,3 +11,21 @@ from project directory:
 ````````
 ./run_tests.sh
 ``````````
+
+
+deploying
+--------
+Availible distros: Ubuntu (maybe Debian)
+from project directory
+
+on vagrant
+
+````````
+fab vagrant webmonitor
+````````
+
+on normal host
+
+``````````
+fab -H hostname webmonitor
+``````````
