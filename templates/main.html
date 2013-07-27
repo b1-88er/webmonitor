@@ -1,0 +1,23 @@
+<html>
+    <head>
+    </head>
+    <body bgcolor="black" text='white' vlink='white', link='white'>
+    <pre>
+        <table border=1>
+            <th> url </th>
+            <th> status </th>
+            <th> reason </th>
+            <th> request time</th>
+            <?py for url, status in statuses: ?>
+            <tr>
+                <td> <a href="${url}">${url}</a> </td>
+
+                <td> ${status.state} </td>
+                <td> ${status.reason} </td>
+                <td> ${status.elapsed } </td>
+            </tr>
+            <?py #endfor ?>
+        </table>
+    </pre>
+    </body>
+</html>
