@@ -6,7 +6,7 @@ tenjin = {'path': [os.path.join(project_dir, 'templates')], }
 frontend_port = 7766
 frontend_host = '0.0.0.0'
 
-log_file = '/var/log/monitor.log'
+log_file = '/var/log/webmonitor.log'
 
 monitors = [
     # (url_to_monitor, required string in page content, interval for connections)
