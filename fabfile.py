@@ -68,8 +68,7 @@ def webmonitor():
     upload(['[program:webmonitor]',
             'user = webmonitor',
             'directory = /opt/webmonitor/webmonitor',
-            'environment = PYTHONPATH=/opt/webmonitor/webmonitor/:$PYTHONPATH',
-            'command = bash -c "source /opt/webmonitor/bin/activate &&python /opt/webmonitor/webmonitor/monitor.py'],
+            'command = bash -c "source /opt/webmonitor/bin/activate && python /opt/webmonitor/webmonitor/monitor.py"'],
            '/etc/supervisor/conf.d/webmonitor.conf',
            owner='root')
 
