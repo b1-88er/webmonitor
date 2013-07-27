@@ -8,5 +8,6 @@ test running
 
 from project directory:
 
-.. code-block:: bash
-    ./run_tests.sh
+````````
+./run_tests.sh
+``````````
