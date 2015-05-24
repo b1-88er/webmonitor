@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/eddwardo/webmonitor.svg?branch=master)](https://travis-ci.org/eddwardo/webmonitor)
 webmonitor
 ==========
 
