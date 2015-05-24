@@ -1,7 +1,7 @@
 import pytest
 from twisted.internet import defer
 
-from monitor import WebMonitor
+from webmonitor.monitor import WebMonitor
 
 def defer_with_content(content):
     '''
