@@ -9,7 +9,7 @@ test running
 from project directory:
 
 ````````
-./run_tests.sh
+tox
 ``````````
 
 
