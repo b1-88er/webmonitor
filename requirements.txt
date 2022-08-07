@@ -1,4 +1,4 @@
-Twisted==22.2.0
+Twisted==22.4.0
 pytest==2.3.5
 pytest-twisted==1.4
 Tenjin==1.1.1
